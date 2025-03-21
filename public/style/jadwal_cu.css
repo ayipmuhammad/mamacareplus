@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu-item {
+  background-color: #f5f5f5;
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: #33cc33;
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Content */
+.content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 22px;
+  color: #33cc33;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Info Boxes */
+.info-box {
+  flex: 1;
+  min-width: 200px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box h3 {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
+}
+
+.info-box p {
+  font-size: 14px;
+  color: #666;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Table */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 16px;
+  text-align: left;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table thead tr {
+  background-color: #33cc33;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #33cc33;
+}
+
+.styled-table .status {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.styled-table .status.confirmed {
+  background-color: #33cc33;
+  color: #ffffff;
+}
+
+.styled-table .status.pending {
+  background-color: #f8c00a;
+  color: #856404;
+}
+
+/* Placeholder Box */
+.placeholder-box {
+  flex: 1;
+  min-width: 150px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.placeholder-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Tombol Kembali */
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #33cc33;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #28a828;
+  transform: scale(1.05);
+}
+
+/* Styling untuk judul section */
+.section-title {
+  font-size: 24px;
+  color: #33cc33;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.section-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Gaya tambahan untuk animasi */
+.info-box:hover {
+  background: linear-gradient(to bottom, #33cc33, #28a828);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Sidebar responsif */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    padding: 10px 20px;
+  }
+
+  .menu {
+    flex-direction: row;
+    overflow-x: auto;
+    justify-content: space-around;
+    gap: 15px;
+  }
+
+  .menu-item {
+    padding: 10px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .info-box, .placeholder-box {
+    min-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Responsif untuk layar sangat kecil */
+@media (max-width: 480px) {
+  .menu-item {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .back-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .info-box, .placeholder-box {
+    min-width: 100%;
+    padding: 15px;
+  }
+
+  .styled-table th,
+  .styled-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+.add-button {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #33cc33;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-button:hover {
+  background-color: #28a828;
+  transform: scale(1.05);
+}
+
+.menu h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.menu-item {
+  background-color: #f5f5f5;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-item:hover {
+  background-color: #33cc33;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item.active {
+  background-color: #33cc33;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.btn-danger {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #c0392b;
+}
+
+/* Styling untuk status di tabel */
+.styled-table .status {
+  font-weight: bold;
+  padding: 6px 10px; /* Menambah padding agar ada jarak vertikal */
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px; /* Ukuran font tetap rapi */
+  display: inline-block; /* Menghindari elemen memenuhi seluruh kolom */
+  text-transform: capitalize; /* Awal teks menjadi huruf kapital */
+  vertical-align: middle; /* Menjaga status tetap di tengah vertikal */
+  line-height: 1; /* Menjaga teks tetap proporsional */
+  margin-top: 5px; /* Memberikan jarak dari garis atas */
+}
+
+/* Menentukan tinggi minimum untuk baris tabel */
+.styled-table tbody tr {
+  height: 60px; /* Tinggi baris tabel lebih besar agar elemen lebih proporsional */
+}
+
+/* Status Terkonfirmasi (dengan warna hijau) */
+.styled-table .status.confirmed {
+  background-color: #33cc33;
+  color: #ffffff;
+}
+
+/* Status Menunggu (dengan warna kuning) */
+.styled-table .status.pending {
+  background-color: #f8c00a;
+  color: #856404;
+}
+
+/* Status Selesai (dengan warna biru) */
+.styled-table .status.completed {
+  background-color: #3498db;
+  color: #ffffff;
+}

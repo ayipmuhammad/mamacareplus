@@ -1,0 +1,394 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden; /* Mencegah scrolling */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top-image img {
+    width: 90%;
+    height: auto;
+}
+
+.bottom-image img {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    z-index: 1; /* Menjaga agar gambar latar bawah tetap berada di belakang */
+}
+
+/* Kotak di tengah halaman */
+.center-box {
+    width: 930px;
+    height: 540px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    background-image: url(../assets/img_form/bg_form.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.center-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.center-box .logo {
+    background-image: url(../assets/img_form/logo_form.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    height: 10%;
+    z-index: 11;
+}
+
+/* Menu Login dan Register */
+.menu {
+    position: absolute;
+    top: 30px;
+    right: 90px;
+    z-index: 12;
+    display: flex;
+    gap: 100px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.login-btn {
+    color: #7985CB;
+}
+
+.register-btn {
+    color: #06D001;
+}
+
+/* Heading dan Subheading */
+.register-heading {
+    color: #06D001;
+    font-size: 23px;
+    font-weight: bold;
+    position: absolute;
+    top: 75px;
+    z-index: 11;
+}
+
+.register-subheading {
+    color: #555;
+    font-size: 14px;
+    font-weight: normal;
+    position: absolute;
+    z-index: 11;
+}
+
+/* Step 1 Heading Position */
+#step-1 .register-heading {
+    right: 47px;
+}
+
+#step-1 .register-subheading {
+    top: 103px;
+    right: 84px;
+}
+
+/* Step 2 Heading Position */
+#step-2 .register-heading {
+    right: 47px;
+}
+
+#step-2 .register-subheading {
+    top: 103px;
+    right: 33px;
+}
+
+/* Label untuk setiap input */
+.form-label {
+    color: #7985CB;
+    font-size: 14px;
+    font-weight: 550;
+    position: absolute;
+    z-index: 11;
+}
+
+/* Step 1 Label Positions */
+#step-1 .form-label[for="nama"] {
+    top: 135px;
+    right: 225px;
+}
+
+#step-1 .form-label[for="nik"] {
+    top: 200px;
+    right: 310px;
+}
+
+#step-1 .form-label[for="ttl"] {
+    top: 265px;
+    right: 310px;
+}
+
+/* Label untuk Golongan Darah */
+#step-1 .form-label[for="gol_darah"] {
+    top: 330px;
+    right: 260px;
+    position: absolute;
+    color: #7985CB;
+    font-size: 14px;
+    font-weight: 550;
+    z-index: 11;
+}
+
+
+/* Golongan Darah */
+#step-1 #gol_darah {
+    top: 350px;
+    right: 55px;
+    width: 290px; /* Lebar konsisten dengan input lainnya */
+    height: 40px; /* Ketinggian dropdown */
+    font-size: 14px; /* Ukuran teks */
+    border: 2px solid #7985CB; /* Warna border */
+    border-radius: 5px; /* Sudut melengkung */
+    outline: none; /* Menghapus outline bawaan browser */
+    position: absolute; /* Tetap di posisi tertentu */
+    z-index: 11; /* Memastikan elemen berada di atas */
+    background-color: white; /* Warna latar belakang dropdown */
+    background-image: url(../assets/img_form/droplet.png); /* Ikon droplet */
+    background-repeat: no-repeat; /* Mencegah ikon berulang */
+    background-position: 10px center; /* Posisi ikon di kiri tengah */
+    background-size: 20px 20px; /* Ukuran ikon seragam */
+    padding-left: 40px; /* Ruang antara teks dan ikon */
+    -webkit-appearance: none; /* Menghapus tampilan bawaan browser (khusus Safari) */
+    -moz-appearance: none; /* Untuk Firefox */
+    appearance: none; /* Untuk browser modern */
+}
+
+.select-container>.dropdown-icon {
+position: absolute;
+right: 7%;
+top: 67%;
+z-index: 100;
+}
+
+#step-1 #gol_darah:focus {
+    border-color: #06D001; /* Warna hijau saat dropdown aktif */
+    box-shadow: 0px 4px 6px rgba(6, 208, 1, 0.2); /* Bayangan lembut saat fokus */
+}
+
+
+
+#step-1 .form-label[for="alamat"] {
+    top: 395px;
+    right: 282px;
+}
+
+/* Step 2 Label Positions */
+#step-2 .form-label[for="email"] {
+    top: 135px;
+    right: 295px;
+}
+
+#step-2 .form-label[for="username"] {
+    top: 200px;
+    right: 262px;
+}
+
+#step-2 .form-label[for="password"] {
+    top: 265px;
+    right: 265px;
+}
+
+#step-2 .form-label[for="confirm-password"] {
+    top: 330px;
+    right: 203px;
+}
+
+/* Label untuk Nomor Telepon */
+#step-2 .form-label[for="no_telp"] {
+    top: 395px;
+    right: 283px;
+    position: absolute;
+    color: #7985CB;
+    font-size: 14px;
+    font-weight: 550;
+    z-index: 11;
+}
+
+
+/* Nomor Telepon */
+#step-2 #no_telp {
+    top: 415px;
+    right: 55px;
+    background-image: url(../assets/img_form/telp.png);
+    background-repeat: no-repeat; /* Pastikan ikon tidak berulang */
+    background-position: 10px center; /* Ikon berada di sebelah kiri tengah */
+    background-size: 20px 20px; /* Ukuran ikon seragam */
+    padding-left: 40px; /* Memberikan jarak antara teks dan ikon */
+}
+
+/* Input Form */
+.form-input {
+    width: 290px;
+    height: 35px;
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #7985CB;
+    border-radius: 5px;
+    outline: none;
+    position: absolute;
+    z-index: 11;
+    padding-left: 40px; /* Memberi ruang untuk ikon */
+    background-repeat: no-repeat;
+    background-position: 10px center; /* Posisikan ikon di sebelah kiri tengah */
+}
+
+.form-input:focus {
+    border-color: #06D001;
+    box-shadow: 0px 4px 6px rgba(6, 208, 1, 0.2);
+}
+
+/* Step 1 Input Positions */
+#step-1 #nama {
+    top: 155px;
+    right: 55px;
+    background-image: url(../assets/img_form/nama.png);
+    background-position: 10px center;
+}
+
+#step-1 #nik {
+    top: 220px;
+    right: 55px;
+    background-image: url(../assets/img_form/NIK.png);
+    background-position: 10px center;
+}
+
+#step-1 #ttl {
+    top: 285px;
+    right: 55px;
+    background-image: url(../assets/img_form/kalender.png);
+    background-position: 10px center;
+}
+
+#step-1 #gol-darah {
+    top: 350px;
+    right: 55px;
+    background-image: url(../assets/img_form/droplet.png);
+    background-position: 10px center;
+}
+
+#step-1 #alamat {
+    top: 415px;
+    right: 55px;
+    background-image: url(../assets/img_form/map.png);
+    background-position: 10px center;
+}
+
+/* Step 2 Input Positions */
+#step-2 #email {
+    top: 155px;
+    right: 55px;
+    background-image: url(../assets/img_form/mail.png);
+    background-position: 10px center;
+}
+
+#step-2 #username {
+    top: 220px;
+    right: 55px;
+    background-image: url(../assets/img_form/unim.png);
+    background-position: 10px center;
+}
+
+#step-2 #password {
+    top: 285px;
+    right: 55px;
+    background-image: url(../assets/img_form/PW.png);
+    background-position: 10px center;
+}
+
+#step-2 #confirm-password {
+    top: 350px;
+    right: 55px;
+    background-image: url(../assets/img_form/PW.png);
+    background-position: 10px center;
+}
+
+#step-2 #no-telp {
+    top: 415px;
+    right: 55px;
+    background-image: url(../assets/img_form/telp.png);
+    background-position: 10px center;
+}
+
+
+/* Indikator Halaman */
+.page-indicator {
+    position: absolute;
+    top: 455px;
+    right: 190px;
+    font-size: 14px;
+    color: #7985CB;
+    text-align: center;
+}
+
+/* Tombol Navigasi */
+.button-section {
+    position: absolute;
+    top: 480px;
+    right: 55px;
+    display: flex;
+    gap: 10px;
+}
+
+.cancel-button, .next-button {
+    width: 140px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.cancel-button {
+    background-color: #ccc;
+    color: #333;
+}
+
+.cancel-button:hover {
+    background-color: #bbb;
+}
+
+.next-button {
+    background-color: #06D001;
+    color: white;
+}
+
+.next-button:hover {
+    background-color: #04b701;
+}
+
+

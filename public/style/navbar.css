@@ -1,0 +1,122 @@
+/* ==================== NAVBAR ======================== */
+.navbar {
+    display: flex;
+    align-items: center; /* Penyesuaian Posisi biar bisa pas ketengah */
+    position: sticky; /* Tetap ditempat */
+    top: 0; /* penempatan atas, biar pas di atas */
+    width: 100%; /* ukuran lebar navbar */
+    z-index: 1000; /* memastikan navbar diatas elemen lain */
+    justify-content: space-between; /* memastikan jarak antar elemen sama */
+    background-color: #80FF00;  
+    padding: 7px 35px; /* Memberikan jarak padding atas bawah = 7px, kiri kanan = 35px */
+}
+
+/* logo navbar style */
+.navbar .logo {
+    display: flex; /* Mengaktifkan Flexbox agar elemen anak dapat diatur lebih fleksibel */
+    align-items: center; /* penempatan item di tengah secara vertikal */
+    color: #FFFFFF; /* warna font */
+    font-size: 18px; /* ukuran font */
+    font-weight: bold; /* tebal font */
+    text-decoration: none; /* menghilangkan garis bawah di teks link */
+    filter: drop-shadow(2px 5px 8px rgb(0, 0, 0, 0.5)); /* Efek bayangan */
+}
+
+/* ukuran logo */
+.navbar .logo img {
+    height: 30px; 
+    margin-right: 15px;
+}
+
+/* Menu icon */
+.navbar .menu {
+    display: flex; /* Mengaktifkan Flexbox agar elemen anak dapat diatur lebih fleksibel */
+    align-items: center; /* penempatan item di tengah secara vertikal */
+    gap: 20px; /* jarak antar icon */
+}
+
+/* keterangan icon */
+.navbar .menu a {
+    color: #FAFAFA; /* font color */
+    text-decoration: none; /* underline link dihilangkan */
+    font-size: 14px; /* ukuran font */
+    font-weight: bold; /* tebal font */
+    display: flex; 
+    align-items: end; /* set biar texnya di tengah secara vertikal */
+}
+
+.navbar .menu a img {
+    height: 17px;
+    margin-right: 5px;  /* jarak icon dengan keterangan */
+}
+
+/* badge notif */
+.navbar .menu .notif .badge {
+    position: absolute;
+    top: -5px;
+    right: -12px;
+    background-color: red; /* background badge */
+    color: white; /* warna font badge */
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 50%; /* buat bentuk bulat */
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .menu .notif {
+    position: relative; /* penempatan badge notif */
+}
+
+/* Avatar di navbar */
+.navbar .menu .profile-link {
+    display: flex; /* Flex untuk mengatur ikon dan teks secara horizontal */
+    align-items: center; /* Pusatkan secara vertikal */
+    color: #FAFAFA; /* Warna teks */
+    text-decoration: none; /* Hilangkan garis bawah */
+    font-size: 14px; /* Ukuran font */
+    font-weight: bold; /* Tebal font */
+}
+
+.navbar .menu .profile-link .avatar-icon {
+    width: 30px; /* Ukuran lebar avatar */
+    height: 30px; /* Ukuran tinggi avatar */
+    border-radius: 50%; /* Bentuk bulat */
+    object-fit: cover; /* Menjaga proporsi gambar */
+    margin-right: 8px; /* Jarak antara gambar dan teks */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    border: 2px solid #FFFFFF; /* Tambahkan border putih di sekitar avatar */
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    display: none; /* Awalnya tidak terlihat */
+    position: absolute; /* Posisi relatif terhadap profile-link */
+    top: 100%; /* Tepat di bawah profile-link */
+    right: 0; /* Rata kanan */
+    background-color: #80FF00; /* Warna sesuai navbar */
+    border-radius: 5px; /* Sudut melengkung */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    z-index: 100; /* Memastikan dropdown di atas elemen lain */
+}
+
+.dropdown-menu button {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF; /* Warna teks */
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none; /* Hilangkan garis bawah */
+    cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+    background-color: #66CC00; /* Warna hijau lebih gelap saat hover */
+}

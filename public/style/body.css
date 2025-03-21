@@ -1,0 +1,25 @@
+html {
+    scroll-behavior: smooth; /* efek scroll halus ke elemen target dalam halaman */
+}
+
+* {
+    margin: 0; /* Men-set margin default dari semua elemen */
+    padding: 0; /* Men-set padding default dari semua elemen */
+    box-sizing: border-box; /* Mengatur box model agar ukuran elemen termasuk padding dan border */
+}
+
+/* Menghapus scrollbar */
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+/* Body Style */
+body {
+    font-family: 'Montserrat', sans-serif; /* font */
+    min-height: 100vh; /* Menutupi layar penuh */
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #F6F6FE; /* warna bg */
+}

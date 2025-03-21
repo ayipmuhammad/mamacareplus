@@ -1,0 +1,188 @@
+.hero {
+    background-image: url("img/Hero.png");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px;
+}
+
+/*=================== ISI =================*/
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.profile-section {
+    display: flex;
+    margin: 25px;
+}
+.sidebar {
+    width: 20%;
+    background-color: #F6F6FE;
+    padding: 10px;
+}
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+.sidebar ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #7985CB;
+    text-decoration: none;
+}
+.sidebar ul li a.active {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: #E2E7FF;
+    color: #1B2769;
+}
+
+/* profil */
+.profile-content {
+    width: 80%;
+    padding: 30px;
+    box-shadow: 0px 0px 4px rgb(0, 0, 0, 0.25);
+    background-color: #FFFFFF;
+    color: #1B2769;
+    border-radius: 8px;
+}
+.profile-photo {
+    display: flex;
+    margin: 20px;
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+.photo-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #ddd;
+}
+.photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+.hover-overlay img {
+    width: 50px;
+    height: 50px;
+}
+.photo-wrapper:hover .hover-overlay {
+    opacity: 1;
+}
+
+/* form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #7985CB;
+    border-radius: 5px;
+}
+::placeholder {
+    color: #B4BAE0;
+}
+label {
+    color: #7985CB;
+    margin-top: 10px;
+}
+
+.input {
+    display: flex;
+}
+.input input {
+    flex: 1;
+    border: 1px solid #7985CB;
+    border-radius: 0px 5px 5px 0px;
+}
+.input .icon-label {
+    background-color: #7985CB;
+    border: none;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 5px 0px 0px 5px;
+}
+.input img {
+    display: flex;
+    padding-top: 5px;
+    width: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.cancel-btn, .save-btn {
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.cancel-btn {
+    background-color: #F6F6FE;
+    color: #7985CB;
+    font-weight: 600;
+    box-shadow: 0.5px 2px 3px rgb(0, 0, 0, 0.5);
+}
+.save-btn {
+    background-color: #06D001;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0.5px 2px 3px rgb(0, 0, 0, 0.5);
+}
+
+.toggle-password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7985CB;
+    color: white;
+    padding: 5px;
+    border-radius: 0px 5px 5px 0px; /* Membentuk sudut kanan input */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-password i {
+    font-size: 16px;
+}
+
+.toggle-password:hover {
+    background-color: #6a74b8; /* Warna hover lebih gelap */
+}
+
+/* Atur posisi ikon dalam input */
+.input .toggle-password {
+    margin-left: -5px; /* Sesuaikan posisi agar lebih rapi */
+    margin-right: 10px; /* Jarak dari input jika diperlukan */
+}
+

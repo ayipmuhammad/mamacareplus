@@ -1,0 +1,178 @@
+* {
+    margin: 0; /* Men-set margin default dari semua elemen */
+    padding: 0; /* Men-set padding default dari semua elemen */
+    box-sizing: border-box; /* Mengatur box model agar ukuran elemen termasuk padding dan border */
+}
+
+/* Menghapus scrollbar */
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+/* Body Style */
+body {
+    font-family: 'Montserrat', sans-serif; /* font */
+    /* min-height: 100vh; Menutupi layar penuh */
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #F6F6FE; /* warna bg */
+}
+
+/* ==================== NAVBAR ======================== */
+.navbar {
+    display: flex;
+    align-items: center; /* Penyesuaian Posisi biar bisa pas ketengah */
+    position: sticky; /* Tetap ditempat */
+    top: 0; /* penempatan atas, biar pas di atas */
+    width: 100%; /* ukuran lebar navbar */
+    z-index: 1000; /* memastikan navbar diatas elemen lain */
+    justify-content: space-between; /* memastikan jarak antar elemen sama */
+    background-color: #80FF00;  
+    padding: 7px 35px; /* Memberikan jarak padding atas bawah = 7px, kiri kanan = 35px */
+}
+/* logo navbar style */
+.navbar .logo {
+    display: flex; /* Mengaktifkan Flexbox agar elemen anak dapat diatur lebih fleksibel */
+    align-items: center; /* penempatan item di tengah secara vertikal */
+    color: #FFFFFF; /* warna font */
+    font-size: 18px; /* ukuran font */
+    font-weight: bold; /* tebal font */
+    text-decoration: none; /* menghilangkan garis bawah di teks link */
+    filter: drop-shadow(2px 5px 8px rgb(0, 0, 0, 0.5)); /* Efek bayangan */
+}
+/* ukuran logo */
+.navbar .logo img {
+    height: 30px; 
+    margin-right: 15px;
+}
+/* Menu icon */
+.navbar .menu {
+    display: flex; /* Mengaktifkan Flexbox agar elemen anak dapat diatur lebih fleksibel */
+    align-items: center; /* penempatan item di tengah secara vertikal */
+    gap: 20px; /* jarak antar icon */
+}
+/* keterangan icon */
+.navbar .menu a {
+    color: #FAFAFA; /* font color */
+    text-decoration: none; /* underline link dihilangkan */
+    font-size: 14px; /* ukuran font */
+    font-weight: bold; /* tebal font */
+    display: flex; 
+    align-items: end; /* set biar texnya di tengah secara vertikal */
+}
+.navbar .menu a img {
+    height: 17px;
+    margin-right: 5px;  /* jarak icon dengan keterangan */
+}
+/* badge notif */
+.navbar .menu .notif .badge {
+    position: absolute;
+    top: -5px;
+    right: -12px;
+    background-color: red; /* background badge */
+    color: white; /* warna font badge */
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 50%; /* buat bentuk bulat */
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar .menu .notif {
+    position: relative; /* penempatan badge notif */
+}
+
+.home:hover {
+    cursor: pointer;
+}
+
+/* Kontainer utama */
+.chat-container {
+    display: flex;
+    height: 93.2vh;
+    overflow: hidden;
+}
+
+/* Sidebar admin */
+.admin-list {
+    width: 25%;
+    color: #FFFFFF;
+    font-weight: 700;
+    background-color: #1B2769;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+.admin-item {
+    padding: 11px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.admin-item:hover {
+    background-color: rgb(0, 0, 0, 0.5);
+    color: white;
+}
+
+/* Chat Window */
+.chat-window {
+    width: 75%;
+    color: #000000;
+    background-color: #1B2769;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    background-color: #1B2769;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.chat-body {
+    background-image: url(img_navbar/chatbg.png);
+    opacity: 0.5;
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.chat-footer {
+    display: flex;
+    padding: 10px;
+    background-color: #1B2769;
+    border-top: 1px solid #ddd;
+}
+
+.chat-footer input {
+    flex: 1;
+    padding: 8px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.chat-footer button {
+    background-color: #80FF00;
+    color: white;
+    border: none;
+    padding: 0px 15px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+.chat-footer img {
+    display: flex;
+    padding-right: 4px;
+    align-items: center;
+    width: 30px;
+}
+.chat-footer button:hover {
+    background-color: #009900;
+}

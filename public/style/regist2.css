@@ -1,0 +1,266 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden; /* Mencegah scrolling */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top-image img {
+    width: 90%;
+    height: auto;
+}
+
+/* Kotak di tengah halaman */
+.center-box {
+    width: 930px; /* Sesuaikan ukuran sesuai keinginan */
+    height: 540px; /* Sesuaikan ukuran sesuai keinginan */
+    background-color: rgba(255, 255, 255, 0.9); /* Warna putih transparan */
+    border-radius: 10px; /* Sudut yang melengkung */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk efek 3D */
+    position: absolute; /* Pastikan berada di atas gambar */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Menempatkan kotak tepat di tengah layar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Memastikan kotak ini berada di depan elemen lainnya */
+    background-image: url(../assets/img_form/bg_form.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.center-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; /* Agar sudut gambar mengikuti bentuk kotak */
+}
+
+.bottom-image img {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    z-index: 1; /* Menjaga agar gambar latar bawah tetap berada di belakang */
+}
+
+.center-box .logo {
+    background-image: url(../assets/img_form/logo_form.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 10px; /* Nilai ini bisa disesuaikan untuk menaikkan logo lebih ke atas */
+    left: 10px; /* Sesuaikan posisi horizontal jika diperlukan */
+    width: 190px; /* Sesuaikan ukuran logo jika perlu */
+    height: 10%;
+    z-index: 11; /* Pastikan logo berada di depan gambar lainnya */
+}
+
+/* Menu Login dan Register */
+.menu {
+    position: absolute;
+    top: 30px; /* Mengurangi nilai top untuk memindahkan menu lebih ke atas */
+    right: 90px; /* Posisi dari sisi kanan */
+    z-index: 12;
+    display: flex;
+    gap: 100px; /* Menyesuaikan jarak antar menu */
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.login-btn {
+    color: #7985CB;
+}
+
+.register-btn {
+    color: #06D001;
+}
+
+/* Heading dan Subheading */
+.register-heading {
+    color: #06D001;
+    font-size: 23px;
+    font-weight: bold;
+    position: absolute;
+    top: 75px; /* Posisi tetap */
+    right: 47px; /* Sesuaikan agar sejajar dengan subheading */
+    z-index: 11;
+}
+
+.register-subheading {
+    color: #555;
+    font-size: 13px;
+    font-weight: normal;
+    position: absolute;
+    top: 103px; /* Posisi tetap */
+    right: 33px; /* Tetap sama dengan heading untuk sejajar */
+    z-index: 11;
+}
+
+
+/* Label untuk setiap input */
+.form-label {
+    color: #7985CB;
+    font-size: 14px;
+    font-weight: 550;
+    position: absolute; /* Posisi absolut agar mudah diatur */
+    z-index: 11;
+}
+
+/* Posisi label untuk setiap input */
+.form-label[for="email"] {
+    top: 135px; /* Geser lebih ke atas */
+    right: 295px;
+}
+
+.form-label[for="username"] {
+    top: 200px; /* Geser lebih ke atas */
+    right: 262px;
+}
+
+.form-label[for="password"] {
+    top: 265px; /* Geser lebih ke atas */
+    right: 265px;
+}
+
+.form-label[for="confirm-password"] {
+    top: 330px; /* Geser lebih ke atas */
+    right: 203px;
+}
+
+.form-label[for="no-telp"] {
+    top: 395px; /* Geser lebih ke atas */
+    right: 283px;
+}
+
+/* Input Form */
+.form-input {
+    width: 290px; /* Lebar input tetap sama */
+    height: 35px; /* Tinggi input */
+    padding: 10px; /* Spasi dalam input */
+    font-size: 14px; /* Ukuran teks */
+    border: 2px solid #7985CB; /* Warna border */
+    border-radius: 5px; /* Sudut melengkung */
+    outline: none; /* Hilangkan outline */
+    position: absolute; /* Posisi absolut */
+    z-index: 11; /* Pastikan input berada di atas elemen lain */
+    padding-left: 40px;
+}
+
+/* Posisi setiap input form */
+#email {
+    top: 155px; /* Geser lebih ke atas */
+    right: 55px;
+    background-image: url(../assets/img_form/mail.png);
+    background-repeat: no-repeat; /* Agar ikon tidak berulang */
+    background-position: 10px center; /* Tempatkan ikon 10px dari kiri, di tengah secara vertikal */
+    background-size: 20px 20px; /* Sesuaikan ukuran ikon */
+    position: absolute;
+}
+
+#username {
+    top: 220px; /* Geser lebih ke atas */
+    right: 55px;
+    background-image: url(../assets/img_form/unim.png);
+    background-repeat: no-repeat; /* Agar ikon tidak berulang */
+    background-position: 10px center; /* Tempatkan ikon 10px dari kiri, di tengah secara vertikal */
+    background-size: 20px 20px; /* Sesuaikan ukuran ikon */
+    position: absolute;
+}
+
+#password {
+    top: 285px; /* Geser lebih ke atas */
+    right: 55px;
+    background-image: url(../assets/img_form/PW.png);
+    background-repeat: no-repeat; /* Agar ikon tidak berulang */
+    background-position: 10px center; /* Tempatkan ikon 10px dari kiri, di tengah secara vertikal */
+    background-size: 20px 20px; /* Sesuaikan ukuran ikon */
+    position: absolute;
+}
+
+#confirm-password {
+    top: 350px; /* Geser lebih ke atas */
+    right: 55px;
+    background-image: url(../assets/img_form/PW.png);
+    background-repeat: no-repeat; /* Agar ikon tidak berulang */
+    background-position: 10px center; /* Tempatkan ikon 10px dari kiri, di tengah secara vertikal */
+    background-size: 20px 20px; /* Sesuaikan ukuran ikon */
+    position: absolute;
+}
+
+#no-telp {
+    top: 415px; /* Geser lebih ke atas */
+    right: 55px;
+    background-image: url(../assets/img_form/telp.png);
+    background-repeat: no-repeat; /* Agar ikon tidak berulang */
+    background-position: 10px center; /* Tempatkan ikon 10px dari kiri, di tengah secara vertikal */
+    background-size: 20px 20px; /* Sesuaikan ukuran ikon */
+    position: absolute;
+}
+
+/* Fokus pada input */
+.form-input:focus {
+    border-color: #06D001; /* Warna hijau untuk fokus */
+    box-shadow: 0px 4px 6px rgba(6, 208, 1, 0.2); /* Bayangan saat fokus */
+}
+
+/* Indikator Halaman */
+.page-indicator {
+    position: absolute;
+    top: 455px; /* Geser ke atas tombol navigasi */
+    right: 190px; /* Sejajar dengan elemen lainnya */
+    font-size: 14px;
+    color: #7985CB;
+    text-align: center;
+}
+
+/* Tombol Navigasi */
+.button-section {
+    position: absolute;
+    top: 480px; /* Letakkan di bawah indikator halaman */
+    right: 55px;
+    display: flex;
+    gap: 10px;
+}
+
+.cancel-button, .next-button {
+    width: 140px; /* Sama seperti tombol di halaman login */
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.cancel-button {
+    background-color: #ccc;
+    color: #333;
+}
+
+.cancel-button:hover {
+    background-color: #bbb;
+}
+
+.next-button {
+    background-color: #06D001;
+    color: white;
+}
+
+.next-button:hover {
+    background-color: #04b701;
+}
+
